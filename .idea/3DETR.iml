@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/third_party/pointnet2" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 virtualenv at D:\Kfir\VS_code_projects\3DETR\.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 virtualenv at D:\Kfir\VS_code_projects\3DETR_landmarks_regression\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

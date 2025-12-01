@@ -125,21 +125,21 @@ def main():
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
     parser.add_argument("--save_dir_root", type=str, default="model_saves", help="Root dir for saving models")
-    parser.add_argument("--model_name", type=str, default="3detr_landmarks", help="Name of the model for saving folder")
+    parser.add_argument("--model_name", type=str, default="3detr_landmarks_v2", help="Name of the model for saving folder")
 
     # Model Params
     parser.add_argument("--enc_dim", type=int, default=256)
     parser.add_argument("--enc_type", type=str, default="vanilla")
-    parser.add_argument("--enc_nlayers", type=int, default=3)
-    parser.add_argument("--enc_nhead", type=int, default=8)
-    parser.add_argument("--enc_ffn_dim", type=int, default=512)
+    parser.add_argument("--enc_nlayers", type=int, default=2)
+    parser.add_argument("--enc_nhead", type=int, default=4)
+    parser.add_argument("--enc_ffn_dim", type=int, default=128)
     parser.add_argument("--enc_dropout", type=float, default=0.1)
     parser.add_argument("--enc_activation", type=str, default="relu")
 
-    parser.add_argument("--dec_nlayers", type=int, default=8)
+    parser.add_argument("--dec_nlayers", type=int, default=6)
     parser.add_argument("--dec_dim", default=256, type=int)
-    parser.add_argument("--dec_nhead", type=int, default=8)
-    parser.add_argument("--dec_ffn_dim", type=int, default=512)
+    parser.add_argument("--dec_nhead", type=int, default=4)
+    parser.add_argument("--dec_ffn_dim", type=int, default=128)
     parser.add_argument("--dec_dropout", type=float, default=0.2)
 
     args = parser.parse_args()
@@ -182,7 +182,7 @@ def main():
     print(', '.join(test_folders))
 
     # Loaders
-    train_loader = DataLoader(train_ds, batch_size=args.batch, shuffle=True, collate_fn=collate_fn)
+    train_loader = DataLoader(train_ds, batch_size=args.batch, shuffle=True, collate_fn=collate_fn, drop_last=True)
     val_loader = DataLoader(val_ds, batch_size=1, shuffle=False, collate_fn=collate_fn)
     test_loader = DataLoader(test_ds, batch_size=1, shuffle=False, collate_fn=collate_fn)
 
