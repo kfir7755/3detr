@@ -1,6 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
 ''' Modified based on: https://github.com/erikwijmans/Pointnet2_PyTorch '''
+
 from __future__ import (
     division,
     absolute_import,
@@ -13,6 +14,9 @@ from torch.autograd import Function
 import torch.nn as nn
 import pytorch_utils as pt_utils
 import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     import builtins

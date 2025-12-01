@@ -432,3 +432,25 @@ if __name__ == "__main__":
     except RuntimeError:
         pass
     launch_distributed(args)
+
+# --- Per-Landmark MED (averaged across samples) ---
+# Landmark  1: 4.690182
+# Landmark  2: 4.486192
+# Landmark  3: 5.154965
+# Landmark  4: 3.678704
+# Landmark  5: 8.520637
+# Landmark  6: 5.172566
+# Landmark  7: 6.762103
+# Landmark  8: 6.865119
+# Landmark  9: 2.689210
+# Landmark 10: 3.536401
+# Landmark 11: 3.622978
+# Landmark 12: 1.758321
+# Landmark 13: 2.573767
+# Landmark 14: 1.544272
+# Landmark 15: 2.369226
+# Landmark 16: 3.795836
+# Landmark 17: 3.013848
+# Overall MED: 4.131431
+
+# Final Test MED: 4.13143

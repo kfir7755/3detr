@@ -1,0 +1,21 @@
+{
+    "data": "D:\\Kfir\\data_for_point_detection_larger",
+    "epochs": 250,
+    "batch": 2,
+    "lr": 0.0001,
+    "device": "cuda",
+    "save_dir_root": "model_saves",
+    "model_name": "3detr_landmarks",
+    "enc_dim": 256,
+    "enc_type": "vanilla",
+    "enc_nlayers": 3,
+    "enc_nhead": 8,
+    "enc_ffn_dim": 512,
+    "enc_dropout": 0.1,
+    "enc_activation": "relu",
+    "dec_nlayers": 8,
+    "dec_dim": 256,
+    "dec_nhead": 8,
+    "dec_ffn_dim": 512,
+    "dec_dropout": 0.2
+}
