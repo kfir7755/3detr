@@ -9,3 +9,4 @@ utils/build/*
 
 # outputs
 outputs/
+**/model_saves/**
